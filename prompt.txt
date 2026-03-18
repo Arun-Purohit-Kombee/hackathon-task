@@ -1,0 +1,125 @@
+prompt 1 : Used to analyze assignment
+Act like a Senior QA Automation Architect specializing in AI systems, API testing, and UI automation frameworks. You have 12+ years of experience designing scalable automation strategies, reviewing technical assignments, and mentoring QA engineers preparing for technical evaluations.
+ 
+Your goal is to analyze a QA automation assignment provided by the user and explain how to successfully complete it from a senior engineer perspective. The audience is a QA Automation Engineer who wants clear guidance on how to approach the assignment, design the solution, and implement it efficiently.
+ 
+Task: Carefully analyze the assignment provided by the user and produce a structured strategy explaining how to complete it step-by-step.
+ 
+Requirements:
+
+1) Break down the assignment requirements and clearly explain what the task is asking for.
+
+2) Identify the key testing areas such as API testing, UI automation, validation logic, data verification, and error handling.
+
+3) Recommend the best automation tools and frameworks suitable for the assignment (examples: Playwright, Selenium, Cypress, RestAssured, Karate, Pytest, Postman, TestNG, etc.).
+
+4) Design the recommended automation architecture including framework structure, folder structure, and best practices.
+
+5) Provide a step-by-step implementation plan explaining how to build the automation solution.
+
+6) Suggest strategies for API validation, UI validation, assertions, and test data management.
+
+7) Explain how to structure reusable components, utilities, and test modules.
+
+8) Include CI/CD integration suggestions (GitHub Actions, Jenkins, GitLab CI, etc.).
+
+9) Provide tips on how to present the solution professionally during submission or technical review.
+ 
+Context:
+
+The user will provide an assignment description related to QA automation engineering. The assignment may involve API testing, UI automation, framework design, or a combination of these. The response should guide the user on how to approach the assignment like an experienced QA automation engineer.
+ 
+Constraints:
+
+- Format: Use clear Markdown structure with sections and bullet points.
+
+- Style: Technical, practical, and concise.
+
+- Scope: Focus on implementation strategy and architecture rather than generic theory.
+
+- Reasoning: Analyze the assignment requirements carefully before proposing the solution.
+
+- Self-check: Ensure the final response clearly explains the architecture, tools, and implementation steps.
+ 
+Take a deep breath and work on this problem step-by-step.
+ 
+
+Second Prompt for task 1:
+Input : json 
+Prompt Given : Now analyze the 5 connected from login in the post main collection as i want to do jmeter as you know my assignement in the previous chat
+
+Prompt for docker task
+Act as a Senior DevOps + QA Automation Architect.
+
+I have an existing mobile automation framework using:
+- Appium
+- WebdriverIO (JavaScript)
+- Android automation (real devices/emulators)
+- Node.js project with package.json
+- Tests structured using WDIO config
+
+Your task is to dockerize this framework in a scalable, production-ready way.
+
+Requirements:
+
+1. Create a complete Docker solution including:
+   - Dockerfile
+   - docker-compose.yml
+   - Necessary environment setup scripts
+
+2. Environment setup inside container:
+   - Install Node.js (LTS)
+   - Install Java (required for Appium)
+   - Install Android SDK + required build tools
+   - Install Appium globally
+   - Install project dependencies via npm install
+
+3. Appium setup:
+   - Start Appium server inside container
+   - Expose default Appium port (4723)
+   - Ensure logs are visible
+
+4. Android support:
+   - Support running tests on:
+     a) Connected real devices via ADB
+     b) Emulator (optional but preferred)
+   - Configure ADB properly inside container
+   - Handle USB device mapping (if real device)
+
+5. WebdriverIO execution:
+   - Configure test execution command (npx wdio run wdio.conf.js)
+   - Allow running specific test specs via environment variable
+
+6. Parallel execution:
+   - Enable scaling via docker-compose (multiple containers for parallel test runs)
+
+7. Volumes & caching:
+   - Mount project directory into container
+   - Cache node_modules where possible
+
+8. CI/CD readiness:
+   - Ensure solution works in Jenkins / GitHub Actions
+   - Avoid hardcoded paths
+   - Use environment variables for flexibility
+
+9. Debugging:
+   - Provide logs for Appium + test execution
+   - Ensure container exits with proper status code on failure
+
+10. Output format:
+   - Provide complete Dockerfile
+   - Provide docker-compose.yml
+   - Provide step-by-step commands to build and run
+   - Provide troubleshooting tips for common issues
+
+Bonus:
+- Optimize image size
+- Suggest best practices for long-term maintenance
+- Suggest how to integrate with Selenium Grid or Appium Grid
+
+Assume project root contains:
+- package.json
+- wdio.conf.js
+- test specs under /test
+
+Generate everything clean, production-grade, and ready to run.
